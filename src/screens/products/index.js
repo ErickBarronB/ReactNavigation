@@ -1,17 +1,26 @@
 import { Button, Text, View } from "react-native";
 
+import { Products } from "../../components/index";
+import { products } from "../../constants/data/index";
 import react from "react";
 import { styles } from "./styles";
 
-const Products = ({ navigation, route }) => {
+const ProductsScreen = ({ navigation, route }) => {
+    const filterProducts = products.filter(item => item.categoryId == route.params.categoryId)
+    const onHandlerSelectedProduct = (item) => {
+        navigation.navigate("Product Detail", {
+            product: item,
+            name: item.title,
+         })
+    }
     return (
         <View style={styles.container}>
-
-            <Text> Products </Text>
-            <Button title="Ir a detalle de productos"  onPress={() => navigation.navigate("Product Detail")} />
+            <Products
+                data={filterProducts}
+                onSelected={onHandlerSelectedProduct}/>
 
         </View>
     )
 }
 
-export default Products;
+export default ProductsScreen;

@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import react from "react";
 import { styles } from "./styles";
 
-const ProductExtraDetails = () => {
+const ProductExtraDetailsScreen = () => {
     return (
         <View style={styles.container}>
 
@@ -13,4 +13,4 @@ const ProductExtraDetails = () => {
     )
 }
 
-export default ProductExtraDetails;
+export default ProductExtraDetailsScreen;

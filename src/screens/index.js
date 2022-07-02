@@ -1,6 +1,6 @@
 
 
-export { default as Categories } from "./categories/index"
-export { default as ProductDetail} from "./product-detail/index"
-export { default as Products } from "./products/index"
-export { default as ProductExtraDetails } from "./ProductExtraDetails/index"
+export { default as CategoriesScreen } from "./categories/index"
+export { default as ProductDetailScreen} from "./product-detail/index"
+export { default as ProductsScreen } from "./products/index"
+export { default as ProductExtraDetailsScreen } from "./ProductExtraDetails/index"
